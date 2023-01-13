@@ -6,7 +6,7 @@ import axios from "axios";
 function CustomCard(props) {
   const deleteCardHandler = () => {
     axios
-      .delete(`http://localhost:3008/deleteCard/${props.cardid}`)
+      .delete(`https://convin-backend-melr.onrender.com/${props.cardid}`)
       .then((res) => {
         console.log(res);
       })
@@ -30,7 +30,7 @@ function CustomCard(props) {
   const clickHandler = () => {
     showModal();
     axios
-      .post(`http://localhost:3008/addHistory`, {
+      .post(`https://convin-backend-melr.onrender.com/addHistory`, {
         title: props.title,
         url: props.url,
       })

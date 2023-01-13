@@ -34,7 +34,7 @@ function AddCard() {
 
     //send request to addCard
     axios
-      .post("http://localhost:3008/addCard", data)
+      .post("https://convin-backend-melr.onrender.com/addCard", data)
       .then((res) => {
         console.log(res.data);
         setIsModalOpen(false);

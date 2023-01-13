@@ -8,7 +8,7 @@ function HistoryList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3008/getHistory")
+      .get("https://convin-backend-melr.onrender.com/getHistory")
       .then((res) => {
         setHistoryList(res.data);
       })

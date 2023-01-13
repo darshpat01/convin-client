@@ -8,7 +8,7 @@ function CardList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3008/getAllCards")
+      .get("https://convin-backend-melr.onrender.com/getAllCards")
       .then((res) => {
         console.log(res.data);
         setCardList(res.data);
