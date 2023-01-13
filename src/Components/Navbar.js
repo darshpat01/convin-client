@@ -21,7 +21,7 @@ function Navbar() {
           className={
             "mx-2 hover:font-bold hover:text-blue-500 active:text-blue-500 text-black no-underline"
           }
-          to="/home"
+          to="/"
         >
           Home
         </NavLink>

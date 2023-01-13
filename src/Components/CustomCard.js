@@ -5,7 +5,7 @@ import axios from "axios";
 
 function CustomCard(props) {
   const deleteCardHandler = () => {
-    console.log(props.cardid);
+    setIsModalOpen(false);
     axios
       .delete(
         `https://convin-backend-melr.onrender.com/deleteCard/${props.cardid}`
