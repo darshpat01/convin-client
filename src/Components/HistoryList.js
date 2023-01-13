@@ -1,10 +1,25 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Space } from "antd";
+import { Space, Button } from "antd";
 import History from "./History";
 
 function HistoryList() {
   const [historyList, setHistoryList] = useState([]);
+
+  const deleteHistoryhandler = () => {
+    axios
+      .delete("https://convin-backend-melr.onrender.com/deleteHistory")
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    setHistoryList([]);
+
+    console.log(historyList);
+  };
 
   useEffect(() => {
     axios
@@ -15,9 +30,14 @@ function HistoryList() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [historyList]);
   return (
     <>
+      <div className="text-start mt-2 py-5 px-4">
+        <Button type="primary" onClick={deleteHistoryhandler}>
+          Delete History
+        </Button>
+      </div>
       <Space
         direction="vertical"
         size="middle"
