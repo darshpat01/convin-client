@@ -5,8 +5,11 @@ import axios from "axios";
 
 function CustomCard(props) {
   const deleteCardHandler = () => {
+    console.log(props.cardid);
     axios
-      .delete(`https://convin-backend-melr.onrender.com/${props.cardid}`)
+      .delete(
+        `https://convin-backend-melr.onrender.com/deleteCard/${props.cardid}`
+      )
       .then((res) => {
         console.log(res);
       })
