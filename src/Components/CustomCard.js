@@ -13,7 +13,6 @@ function CustomCard(props) {
       .catch((err) => {
         console.log(err);
       });
-    window.location.reload();
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
